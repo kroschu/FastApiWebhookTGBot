@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  code-server:
+    image: kroschu/self_keeper-arm64
+    container_name: "self_keeper.rmrf.pp.ua"
+    volumes:
+      - $PWD:/app  # Переконайтесь, що $PWD працює у вашій системі
+    ports:
+      - 5050:5050
+    restart: unless-stopped
